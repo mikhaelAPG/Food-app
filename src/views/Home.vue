@@ -1,5 +1,9 @@
 <template>
   <b-container>
+    <div class="my-3">
+      <h1 class="text-center">Goods</h1>
+      <b-button href="/Add">Add</b-button>
+    </div>
     <div>
       <b-table striped hover :items="items"></b-table>
     </div>
@@ -16,10 +20,10 @@ export default {
   data() {
       return {
         items: [
-          { UID:1, age: 40, first_name: 'Dickerson', last_name: 'Macdonald' },
-          { UID:2, age: 21, first_name: 'Larsen', last_name: 'Shaw' },
-          { UID:3, age: 89, first_name: 'Geneva', last_name: 'Wilson' },
-          { UID:4, age: 38, first_name: 'Jami', last_name: 'Carney' }
+          { UID:10, number_of_stack: 1, Name: 'Ayam Bawang', Recipe: 'ayam, bawang', used_by: 'Andy', user_id: 'u1', batch_number: 'X1' },
+          { UID:20, number_of_stack: 2, Name: 'Ayam Geprek', Recipe: 'ayam, cabe', used_by: 'Budi', user_id: 'u2', batch_number: 'X2' },
+          { UID:30, number_of_stack: 3, Name: 'Ayam Bakar', Recipe: 'ayam, kecap', used_by: 'Dona', user_id: 'u3', batch_number: 'X3' },
+          { UID:40, number_of_stack: 4, Name: 'Ayam Goreng', Recipe: 'ayam, minyak', used_by: 'Dodi', user_id: 'u4', batch_number: 'X4' }
         ]
       }
     }
