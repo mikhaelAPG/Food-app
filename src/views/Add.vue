@@ -1,47 +1,61 @@
 <template>
   <b-container>
     <div class="my-3">
-      <h1 class="text-center mt-5">Add User</h1>
+      <h1 class="text-center mt-5">Add Goods</h1>
         </div>
         <div>
         <div>
         <b-form @submit="onSubmit" @reset="onReset" v-if="show" class="w-50">
-        <b-form-group
-            id="input-group-1"
-            label="Email address:"
-            label-for="input-1"
-            description="We'll never share your email with anyone else."
-        >
+
+        <b-form-group id="input-group-2" label="Item Name:" label-for="input-1">
             <b-form-input
             id="input-1"
-            v-model="form.email"
-            type="email"
-            placeholder="Enter email"
-            required
-            ></b-form-input>
-        </b-form-group>
-
-        <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
-            <b-form-input
-            id="input-2"
             v-model="form.name"
-            placeholder="Enter name"
+            placeholder="Enter item name"
             type="text"
             required
             ></b-form-input>
         </b-form-group>
 
-        <b-form-group id="input-group-3" label="Your Password:" label-for="input-3">
+        <b-form-group id="input-group-2" label="Number of Stock:" label-for="input-2">
             <b-form-input
-            id="input-3"
-            v-model="form.password"
-            type="password"
+            id="input-2"
+            v-model="form.stock"
+            placeholder="Enter Number of Stock"
+            type="text"
             required
             ></b-form-input>
         </b-form-group>
 
+        <b-form-group id="input-group-3" label="Ingredient 1:" label-for="input-3">
+        <b-form-select
+          id="input-3"
+          v-model="form.food"
+          :options="foods"
+          required
+        ></b-form-select>
+        </b-form-group>
+
+        <b-form-group id="input-group-3" label="Ingredient 2:" label-for="input-4">
+        <b-form-select
+          id="input-4"
+          v-model="form.food"
+          :options="foods"
+          required
+        ></b-form-select>
+        </b-form-group>
+
+        <b-form-group id="input-group-3" label="Ingredient 3:" label-for="input-5">
+        <b-form-select
+          id="input-5"
+          v-model="form.food"
+          :options="foods"
+          required
+        ></b-form-select>
+        </b-form-group>
+
         <b-button type="submit" variant="primary">Submit</b-button>
-        <b-button type="reset" variant="danger" class="ml-3">Cancel</b-button>
+        <b-button variant="danger" class="ml-3" href="/cancel">Cancel</b-button>
         </b-form>
     </div>
         </div>
